@@ -5,18 +5,9 @@
 #include <SD.h>
 #include <SerialFlash.h>
 
-#include "AudioSamplePiano_c3_44k.h"  // include the sample data for the piano sound
-
 const int BUTTON_PIN(0);
 
 Bounce button_bounce( BUTTON_PIN, 5 );     // 5ms debounce time
-
-// GUItool: begin automatically generated code
-AudioPlayMemory          playMem1;       //xy=113,154
-AudioOutputAnalog        dac1;           //xy=324,155
-AudioConnection          patchCord1(playMem1, dac1);
-// GUItool: end automatically generated code
-
 
 void setup()
 {
@@ -38,8 +29,6 @@ void loop()
     if( button_bounce.fallingEdge() )
     {
       Serial.println("Button down");
-
-      playMem1.play( AudioSamplePiano_c3_44k );
     }
   }
 }
