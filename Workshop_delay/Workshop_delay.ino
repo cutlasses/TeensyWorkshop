@@ -35,7 +35,7 @@ void setup()
 {
   pinMode( BUTTON_PIN, INPUT_PULLUP ); // set the pin mode for the button and enable the pull up resistor inside the Teensy
 
- AudioMemory(128); // allocate some memory from the teensy audio libary
+  AudioMemory(128); // allocate some memory from the teensy audio libary
 
   Serial.begin(9600);
 
